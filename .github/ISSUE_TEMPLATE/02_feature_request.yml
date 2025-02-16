@@ -1,0 +1,43 @@
+name: Feature Request
+description: Návrh pro zdokonalení služeb
+title: "[FEATURE REQUEST]: "
+labels: ["feature request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Před podáním návrhu se prosím ujisti, že stejný či podobný návrh již není podán.
+  - type: input
+    id: nickname
+    attributes:
+      label: Přezdívka ve hře
+      description: Pro nárok na odměnu z našeho bug bounty programu je nutné, aby jste zadali Vaši herní přezdívku.
+      placeholder: El_Frod0
+    validations:
+      required: true
+  - type: dropdown
+    id: affected-project
+    attributes:
+      label: Návrh se týká jakých částí projektů? Lze vybrat více možností.
+      multiple: true
+      options:
+        - Server
+        - Klient (mClient)
+        - Resource Pack
+        - Discord
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Návrh
+      description: V čem tvůj návrh spočívá? Co by se mělo změnit?
+    validations:
+      required: true
+  - type: textarea
+    id: expected-complications
+    attributes:
+      label: Následky
+      description: V případě, že by tvůj návrh byl zrealizován, jaké by to mělo následky? Pořádně si promysli pozitiva i negativa.
+    validations:
+      required: true
