@@ -1,0 +1,72 @@
+name: Bug Report
+description: Hlášení chyby/bugu/nedostatku
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Před hlášením chyby se prosím ujisti, že stejný či podobný problém již není nahlášen.
+        ## V případě, že se jedná o druh chyby, který může být potenciálně zneužit jinými hráči, tak jej prosím nahlas prostřednictvím Ticket systému na [Discordu](https://discord.gg/K8Tt5F5STH) pro co nejefektivnější zamezení škod.
+  - type: input
+    id: nickname
+    attributes:
+      label: Přezdívka ve hře
+      description: Pro nárok na odměnu z našeho bug bounty programu je nutné, aby jste zadali Vaši herní přezdívku.
+      placeholder: El_Frod0
+    validations:
+      required: true
+  - type: dropdown
+    id: affected-project
+    attributes:
+      label: V jaké části projektu se chyba vyskytuje?
+      multiple: false
+      options:
+        - Server
+        - Klient (mClient)
+        - Resource Pack
+        - Discord
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Očekávané chování
+      description: Popište, jaké bylo Vaše očekávání, když by žádná chyba neexistovala.
+    validations:
+      required: true
+  - type: textarea
+    id: observed-behavior
+    attributes:
+      label: Pozorované chování
+      description: Nyní popište co se přesně stalo.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Kroky pro reprodukci chyby
+      description: Nyní detailně popište jak danou chybu zreprodukovat. Můžete sem vložit i fotky, videa, či cokoliv o čem si myslíte, že nám může pomoci.
+    validations:
+      required: true
+  - type: checkboxes
+    id: agreements
+    attributes:
+      label: Souhlasy
+      description: Prosím, odsouhlaste následující.
+      options:
+        - label: Používám doporučenou verzi hry/klienta (1.21.4).
+          required: true
+        - label: Zaškrtnul jsem všechny boxíky, aniž bych si je přečetl.
+          required: false
+        - label: V případě, že se jedná o chybu v klientovi (mClient) nebo ResourcePacku, tak jsem se ujistil, že používám nejaktuálnější verzi.
+          required: true
+  - type: textarea
+    id: other
+    attributes:
+      label: Doplňující informace
+      description: |
+        V případě, že máte nějaké doplňující informace, které se nám mohou hodit, tak je také zapište.
+        Čím více detailních informací budeme mít, o to rychleji a efektivněji budeme moci chybu vyřešit.
+    validations:
+      required: true
