@@ -1,5 +1,5 @@
 <p align=center>
-    <img src="(https://github.com/MAJNRUJ/bug-tracker/blob/main/.github/logo.png?raw=true)" alt="MAJNRUJ Wide Logo" />
+    <img src="https://github.com/MAJNRUJ/bug-tracker/blob/main/.github/logo.png?raw=true" alt="MAJNRUJ Wide Logo" />
 </p>
 
 ## MAJNRUJ Bug Tracker
